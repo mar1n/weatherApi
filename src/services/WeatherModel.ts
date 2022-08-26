@@ -1,11 +1,10 @@
-import { WeatherPredictorService, Weather } from "../services/WeatherPredictorService"
+import { WeatherPredictorServiceI, WeatherE } from "../utils/types";
 
-class WeatherModel implements WeatherPredictorService {
+class WeatherModel implements WeatherPredictorServiceI {
     public getWeather(date: Date) {
-        return Weather.SUNNY;
+        return WeatherE.SUNNY;
     }
-    public updateWeather(date: Date, weather: Weather): void {
-        
+    public updateWeather(date: Date, weather: WeatherE): void {
     }
 }
 
