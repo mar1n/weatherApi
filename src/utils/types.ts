@@ -11,6 +11,11 @@ export interface WeatherPredictorServiceI {
   updateWeather(date: Date, weather: WeatherE): void;
 }
 
+export interface WeatherModelI {
+  defaultMonths: { month: string; weather: string }[];
+  myDays: { day: Date; weather: string }[];
+}
+
 export interface defaultWeatherI {
   month: string;
   weather: string;

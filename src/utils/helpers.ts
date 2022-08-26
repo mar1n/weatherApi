@@ -1,6 +1,6 @@
 import { defaultWeatherI, weatherDayI } from "./types";
 
-const defaultWeather: defaultWeatherI[] = [
+export const defaultWeather: defaultWeatherI[] = [
   { month: "January", weather: "SNOW" },
   { month: "February", weather: "SNOW" },
   { month: "March", weather: "RAINY" },
