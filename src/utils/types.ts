@@ -12,7 +12,7 @@ export interface WeatherPredictorServiceI {
 }
 
 export interface WeatherModelI {
-  defaultMonths: { month: string; weather: string }[];
+  defaultWeather: { month: string; weather: string }[];
   myDays: { day: Date; weather: string }[];
 }
 
