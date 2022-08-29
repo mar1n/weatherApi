@@ -34,3 +34,5 @@ let getWeather = (date: Date) => {
   const month = getMonth(date);
   return defaultWeather.find((value) => value.month === month)!.weather;
 };
+
+export const convertToDate = (date : number) => new Date(Number(date));

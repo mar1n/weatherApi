@@ -10,14 +10,14 @@ class DefaultWeatherPredictorService implements WeatherModel {
   }
 
   public getWeather(date: Date): WeatherE {
-    const d = new Date(date);
-    const month = this.defaultWeather[d.getMonth()].month;
-    const findForDay = this.myDays.find((value) => value.day === date);
+    const month = this.defaultWeather[date.getMonth()].month;
+    const findForDay = this.myDays.find((value) => {
+      return value.day.toString() === date.toString()
+    });
     if (findForDay) {
       const predict = findForDay.weather;
       return WeatherE[`${predict as WeatherE}`];
     }
-    console.log("getMonth", month);
     const predict = this.defaultWeather.find(
       (value) => value.month === month
     )!.weather;
