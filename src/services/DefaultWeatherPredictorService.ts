@@ -1,6 +1,5 @@
-import { WeatherE, WeatherPredictorServiceI } from "../utils/types";
-import WeatherModel from "./WeatherModel";
-class DefaultWeatherPredictorService implements WeatherModel {
+import { WeatherE, WeatherPredictorServiceI, WeatherModelI } from "../utils/types";
+class DefaultWeatherPredictorService implements WeatherPredictorServiceI, WeatherModelI  {
   defaultWeather: { month: string; weather: string }[];
   myDays: { day: Date; weather: string }[];
   

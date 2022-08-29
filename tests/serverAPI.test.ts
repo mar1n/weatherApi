@@ -1,7 +1,7 @@
 import { expect } from "chai";
 
 const request = require("supertest");
-const createServer = require("../src/index");
+const createServer = require("../src/server");
 const app = createServer()
 
 const date = Date.parse("2022-08-29")
